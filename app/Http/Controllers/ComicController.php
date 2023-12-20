@@ -34,7 +34,12 @@ class ComicController extends Controller
     {
         $data = $request->all();
 
-        dd($data);
+        // 
+        
+        $new_comic = Comic::create($data);
+
+        return redirect()->route('comics.show', $new_comic);
+        
     }
 
     /**
@@ -50,15 +55,19 @@ class ComicController extends Controller
      */
     public function edit(Comic $comic)
     {
-        //
+        return view('comics.edit', compact('comic'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateComicRequest $request, Comic $comic)
+    public function update( Request $request, Comic $comic)
     {
-        //
+        $data = $request->all();
+
+        $comic->update($data);
+
+        return redirect()->route('comics.show', $comic);
     }
 
     /**
@@ -66,6 +75,8 @@ class ComicController extends Controller
      */
     public function destroy(Comic $comic)
     {
-        //
+        $comic->delete();
+
+        return redirect()->route('comics.index');
     }
 }
