@@ -1,1 +1,21 @@
+@use '../scss/partials/variables';
+@use '../scss/partials/header';
 @import '~bootstrap/scss/bootstrap';
+
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Condensed:wght@500;600;700&family=Open+Sans&display=swap');
+
+
+body {
+
+    font-family: 'Open Sans', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: currentColor;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}

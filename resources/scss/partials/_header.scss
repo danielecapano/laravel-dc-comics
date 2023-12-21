@@ -1,0 +1,39 @@
+@use '../partials/variables';
+
+.header {
+    font-family: 'Encode Sans Condensed', sans-serif;
+}
+
+.logo {
+    width: 80px;
+}
+
+.menu {
+    text-transform: uppercase;
+    list-style: none;
+    font-weight: 600;
+    color: #464646;
+    gap: 2.75rem;
+
+    .menu-item {
+
+        &.active {
+            color: #0282F9;
+            border-bottom: 4px solid currentColor;
+        }
+
+        a {
+            line-height: 115px;
+
+
+        }
+    }
+}
+
+.search {
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #0282F9;
+    text-align: right;
+    padding-block: 0.25rem;
+}
