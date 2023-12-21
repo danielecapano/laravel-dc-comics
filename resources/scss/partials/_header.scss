@@ -9,11 +9,12 @@
 }
 
 .menu {
+    justify-content: space-between;
     text-transform: uppercase;
     list-style: none;
     font-weight: 600;
     color: #464646;
-    gap: 2.75rem;
+    // gap: 2.75rem;
 
     .menu-item {
 
@@ -31,6 +32,7 @@
 }
 
 .search {
+    // width: 150px;
     border: none;
     outline: none;
     border-bottom: 2px solid #0282F9;
